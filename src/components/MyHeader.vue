@@ -8,7 +8,6 @@
 
             </div>
         </div>
-
         <div class="header-content">
             <h1>Untold Stories</h1>
             <h2>There is an untold story behind every favorite song.</h2>
@@ -31,6 +30,10 @@ export default {
 
     header{
         background-image: url(../assets/img/home_slider.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
         color: white;
         
         .container-logo {
