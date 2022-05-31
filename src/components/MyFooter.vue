@@ -17,10 +17,10 @@
           <p>POWERED BY WORDPRESS</p>
         </div>
         <div>
-          <i class="fab fa-facebook-f"></i>
-          <i class="fab fa-twitter"></i>
-          <i class="fab fa-instagram"></i>
-          <i class="fab fa-youtube"></i>
+          <a href="https://it-it.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
         </div>
     </div>
   </footer>
@@ -62,6 +62,7 @@ export default {
     width: 45px;
     padding: 0.8rem;
     margin: 0 10px;
+    cursor: pointer;
   }
 }
 </style>

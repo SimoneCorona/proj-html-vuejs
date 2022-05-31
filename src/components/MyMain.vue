@@ -15,14 +15,28 @@
     <div class="banner">
       <div class="container">
         <div class="col-left">
-          left
+          <div class="card">
+            <img src="../assets/img/blog-post1-400x600.jpg" alt="">
+            <div class="card-text">
+              <h1>Taking it back to the old school</h1>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, quis voluptates?</p>
+            </div>
+          </div>
         </div>
         <div class="col-right">
           <div class="card">
-
+            <img src="../assets/img/blog-post1-400x600.jpg" alt="">
+            <div class="card-text">
+              <h1>Taking it back to the old school</h1>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, quis voluptates?</p>
+            </div>
           </div>
           <div class="card">
-
+            <img src="../assets/img/blog-post2-400x600.jpg" alt="">
+            <div class="card-text">
+              <h1>Sharing the stage with a legend</h1>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, quis voluptates?</p>
+            </div>
           </div>
         </div>
       </div>
@@ -122,15 +136,13 @@ export default {
     .dark-container {
         background-color: $brand-primary-bg-color;
 
-        ul li, a {
+        ul li{
           color: $brand-primary-btn-color;
           background-color: $brand-primary-bg-light-color;
           padding: 5px;
           margin: 10px 0;
           font-size: 0.8rem;
           text-align: start;
-          list-style: none;
-          text-decoration: none;
         }
         i {
           color: white;
@@ -141,19 +153,35 @@ export default {
     .banner {
       .container {
         display: flex;
-        height: 500px;
+        min-height: 500px;
         background-color: $brand-primary-bg-color;
-        padding: 0 30%;
+        padding: 0 15% 5%;
         
         .col-left {
           height: 100%;
           width: 100%;
-          background-color: red;
         }
         .col-right {
           height: 100%;
           width: 70%;
-          background-color: blue;
+          margin-left: 10px;
+        }
+        .card {
+          img {
+            width: 100%;
+            }
+            .card-text {
+              background-color: $brand-primary-bg-light-color;
+              padding: 20px;
+              font-size: 0.7rem;
+              h1 {
+                color: $brand-primary-btn-color;
+              }
+              p {
+                  color: #7D7B8D;
+                  line-height: 1.5rem;
+              }
+          }
         }
       }
     }
@@ -162,11 +190,14 @@ export default {
       background-color: $brand-primary-btn-color;
       height: 80px;
       line-height: 80px;
-
-      a {
-        text-decoration: none;
-        color: white;
-      }
+      font-size: 0.8rem;
+      color: white;
+      cursor: pointer;
+      transition: .5s;
+    }
+    .red-container:hover {
+        background-color: white;
+        color: black;
     }
    
     .jumbotron {
