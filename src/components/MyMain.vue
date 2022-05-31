@@ -34,8 +34,8 @@
     
     <div class="jumbotron">
       <div>
-        <h1>"I just listened to it and said to myself, "Man, I really love this album." Still, today, it just sounds so fresh. It sounds full of ideas. These guys knew what they were doing. They' re good. And they're inventive. I haven't heard anything this year that's ad inventite. I don't really expect to."</h1>
-        <i></i>
+        <h1>"I just listened to it and said to myself, "Man, I really love this album." Still, today, it just sounds so fresh. It sounds full of ideas. These guys knew what they were doing. They' re good. And they're inventive. I haven' t heard anything this year that's ad inventite. I don' t really expect to."</h1>
+        <i class="fas fa-play"></i>
       </div>
     </div>
 
@@ -44,7 +44,12 @@
         <div class="divider"></div>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus excepturi numquam unde cumque repudiandae recusandae inventore molestias quam perspiciatis, nihil, omnis et laborum, voluptate natus? Fugit voluptates accusamus modi nisi.</p>
         <ul v-for="(element, index) in liveDates" :key="index">
-          <li>{{ element.date }} {{ element.name }} {{ element.state }}</li>
+          <li>
+            <a href="">
+              <i class="fas fa-plus"></i>
+              {{ element.date }} {{ element.name }} {{ element.state }}
+            </a>
+          </li>
         </ul>
     </div>
 
@@ -108,6 +113,7 @@ export default {
         }
         p {
           color: #7D7B8D;
+          line-height: 1.5rem;
         }
     }
     .light-container {
@@ -116,13 +122,20 @@ export default {
     .dark-container {
         background-color: $brand-primary-bg-color;
 
-        ul li {
+        ul li, a {
           color: $brand-primary-btn-color;
           background-color: $brand-primary-bg-light-color;
           padding: 5px;
           margin: 10px 0;
+          font-size: 0.8rem;
           text-align: start;
           list-style: none;
+          text-decoration: none;
+        }
+        i {
+          color: white;
+          font-size: 0.5rem;
+          padding: 0.8rem;
         }
     }
     .banner {
@@ -174,6 +187,14 @@ export default {
 
         h1 {
           font-size: 1rem;
+          line-height: 1.5rem;
+        }
+        i {
+          background-color: #ea4a56;
+          color: white;
+          padding: 1.2rem;
+          border-radius: 50%;
+          margin: 2rem 0;
         }
       }
     }

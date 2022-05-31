@@ -5,7 +5,7 @@
                 <img src="../assets/img/avada-music-logo.png" alt="">
             </div>
             <div>
-
+                <i class="fas fa-bars"></i>
             </div>
         </div>
         <div class="header-content">
@@ -37,7 +37,14 @@ export default {
         height: 100vh;
 
         .container-logo {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             padding: 30px;
+            
+            i {
+                font-size: 1.5rem;
+            }
         }
         .header-content {
             text-align: center;
@@ -47,11 +54,12 @@ export default {
             }
             h1 {
                 margin-top: 6rem;
-                font-size: 4rem;
+                font-size: 7rem;
             }
             h2 {
                 margin-top: 1rem;
                 font-size: medium;
+                font-weight: lighter;
             }
             .buttons {
                 margin: 3rem 0;
@@ -60,6 +68,7 @@ export default {
                     padding: 0.5rem 1.2rem;
                     margin: 0 10px;
                     color: white;
+                    box-shadow: 0px;
                 }
                 .red-btn {
                     background-color: $brand-primary-btn-color;
