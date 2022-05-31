@@ -26,28 +26,48 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
+@import "../style/variable.scss";
 
     header{
         background-image: url(../assets/img/home_slider.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        width: 100%;
         color: white;
-        
+        height: 100vh;
+
         .container-logo {
             padding: 30px;
         }
         .header-content {
             text-align: center;
 
+            h1 h2 {
+                color: white;
+            }
+            h1 {
+                margin-top: 6rem;
+                font-size: 4rem;
+            }
+            h2 {
+                margin-top: 1rem;
+                font-size: medium;
+            }
             .buttons {
+                margin: 3rem 0;
+
                 button {
                     padding: 0.5rem 1.2rem;
+                    margin: 0 10px;
+                    color: white;
+                }
+                .red-btn {
+                    background-color: $brand-primary-btn-color;
+                    border-color: $brand-primary-btn-color;
                 }
                 .transparent-btn {
                     background-color: transparent;
+                    border-color: white;
                 }
             }
         }

@@ -1,12 +1,12 @@
 <template>
   <main>
-      <div class="bg-light-container">
+      <div class="bg light-container">
         <h1>Music Is Life</h1>
         <div class="divider"></div>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus excepturi numquam unde cumque repudiandae recusandae inventore molestias quam perspiciatis, nihil, omnis et laborum, voluptate natus? Fugit voluptates accusamus modi nisi.</p>
     </div>
 
-    <div class="bg-dark-container">
+    <div class="bg dark-container">
         <h1>Latest Band News</h1>
         <div class="divider"></div>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus excepturi numquam unde cumque repudiandae recusandae inventore molestias quam perspiciatis, nihil, omnis et laborum, voluptate natus? Fugit voluptates accusamus modi nisi.</p>
@@ -14,7 +14,17 @@
     
     <div class="banner">
       <div class="container">
+        <div class="col-left">
+          left
+        </div>
+        <div class="col-right">
+          <div class="card">
 
+          </div>
+          <div class="card">
+
+          </div>
+        </div>
       </div>
     </div>
 
@@ -29,7 +39,7 @@
       </div>
     </div>
 
-    <div class="bg-dark-container">
+    <div class="bg dark-container">
         <h1>Live Dates</h1>
         <div class="divider"></div>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus excepturi numquam unde cumque repudiandae recusandae inventore molestias quam perspiciatis, nihil, omnis et laborum, voluptate natus? Fugit voluptates accusamus modi nisi.</p>
@@ -86,16 +96,53 @@ export default {
 
 <style scoped lang="scss">
 @import "../style/variable.scss";
+@import "../style/common.scss";
     
-    .bg-light-container {
-        background-color: $brand-primary-bg-light-color;
+
+    .bg {
         padding: 5% 20%;
         text-align: center;
+
+        h1 {
+          color: white;
+        }
+        p {
+          color: #7D7B8D;
+        }
     }
-    .bg-dark-container {
+    .light-container {
+        background-color: $brand-primary-bg-light-color;
+    }
+    .dark-container {
         background-color: $brand-primary-bg-color;
-        padding: 5% 20%;
-        text-align: center;
+
+        ul li {
+          color: $brand-primary-btn-color;
+          background-color: $brand-primary-bg-light-color;
+          padding: 5px;
+          margin: 10px 0;
+          text-align: start;
+          list-style: none;
+        }
+    }
+    .banner {
+      .container {
+        display: flex;
+        height: 500px;
+        background-color: $brand-primary-bg-color;
+        padding: 0 30%;
+        
+        .col-left {
+          height: 100%;
+          width: 100%;
+          background-color: red;
+        }
+        .col-right {
+          height: 100%;
+          width: 70%;
+          background-color: blue;
+        }
+      }
     }
     .red-container {
       text-align: center;
@@ -108,6 +155,7 @@ export default {
         color: white;
       }
     }
+   
     .jumbotron {
       background-image: url(../assets/img/home-testimonial-parallax.jpg);
       height: 700px;              
