@@ -57,13 +57,8 @@
         <h1>Live Dates</h1>
         <div class="divider"></div>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus excepturi numquam unde cumque repudiandae recusandae inventore molestias quam perspiciatis, nihil, omnis et laborum, voluptate natus? Fugit voluptates accusamus modi nisi.</p>
-        <ul v-for="(element, index) in liveDates" :key="index">
-          <li>
-            <a href="">
-              <i class="fas fa-plus"></i>
-              {{ element.date }} {{ element.name }} {{ element.state }}
-            </a>
-          </li>
+        <ul>
+          <MyLiveDates v-for="(element, index) in liveDates" :key="index" :live="element"/>
         </ul>
     </div>
 
@@ -76,39 +71,42 @@
 </template>
 
 <script>
+import MyLiveDates from './MyLiveDates.vue'
+
 export default {
-    name: 'MyMain',
+    name: "MyMain",
     data() {
-      return {
-        liveDates: [
-          {
-            date: '17/08/2020',
-            name: 'GEM FESTIVAL 2020',
-            state: 'ANAKALIA, GEORGIA'
-          },
-          {
-            date: '24/9/2020',
-            name: 'GROOVFEST',
-            state: 'DOMINIC REPUBLIC'
-          },
-          {
-            date: '31/10/2020',
-            name: 'OASIS FESTIVAL 2020 MARRAKECH',
-            state: 'MARRAKECH, MOROCCO'
-          },
-          {
-            date: '07/11/2020',
-            name: 'MOGA FESTIVAL -',
-            state: 'ESSAOURIA, MOROCCO'
-          },
-          {
-            date: '10/12/2020',
-            name: 'ENVISION FESTIVAL -',
-            state: 'UVITA, COSTA RICA'
-          },
-        ]
-      }
-    }
+        return {
+            liveDates: [
+                {
+                    date: "17/08/2020",
+                    name: "GEM FESTIVAL 2020",
+                    state: "ANAKALIA, GEORGIA"
+                },
+                {
+                    date: "24/9/2020",
+                    name: "GROOVFEST",
+                    state: "DOMINIC REPUBLIC"
+                },
+                {
+                    date: "31/10/2020",
+                    name: "OASIS FESTIVAL 2020 MARRAKECH",
+                    state: "MARRAKECH, MOROCCO"
+                },
+                {
+                    date: "07/11/2020",
+                    name: "MOGA FESTIVAL -",
+                    state: "ESSAOURIA, MOROCCO"
+                },
+                {
+                    date: "10/12/2020",
+                    name: "ENVISION FESTIVAL -",
+                    state: "UVITA, COSTA RICA"
+                },
+            ]
+        };
+    },
+    components: { MyLiveDates }
 }
 
 </script>
@@ -143,11 +141,6 @@ export default {
           margin: 10px 0;
           font-size: 0.8rem;
           text-align: start;
-        }
-        i {
-          color: white;
-          font-size: 0.5rem;
-          padding: 0.8rem;
         }
     }
     .banner {
