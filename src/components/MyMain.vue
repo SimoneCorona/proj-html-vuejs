@@ -14,15 +14,43 @@
     
     <div class="banner">
       <div class="container">
+        
         <div class="col-left">
           <div class="card">
-            <img src="../assets/img/blog-post1-400x600.jpg" alt="">
+            <img src="../assets/img/blog_music_techo-600x300.jpg" alt="">
             <div class="card-text">
-              <h1>Taking it back to the old school</h1>
+              <h1>Technology and music</h1>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, quis voluptates?</p>
+            </div>
+          </div>
+          
+          <section>
+            <div class="card">
+              <img src="../assets/img/blog-post3-200x300.jpg" alt="">
+              <div class="card-text">
+                <h1>While my guitar gently weeps</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, quis voluptates?</p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="../assets/img/blog-post4-200x300.jpg" alt="">
+              <div class="card-text">
+                <h1>It just sound better</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, quis voluptates?</p>
+              </div>
+            </div>
+          </section>
+          
+          
+          <div class="card">
+            <img src="../assets/img/blog_flavor_rock-600x300.jpg" alt="">
+            <div class="card-text">
+              <h1>The flavor of rock</h1>
               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, quis voluptates?</p>
             </div>
           </div>
         </div>
+        
         <div class="col-right">
           <div class="card">
             <img src="../assets/img/blog-post1-400x600.jpg" alt="">
@@ -49,7 +77,7 @@
     <div class="jumbotron">
       <div>
         <h1>"I just listened to it and said to myself, "Man, I really love this album." Still, today, it just sounds so fresh. It sounds full of ideas. These guys knew what they were doing. They' re good. And they're inventive. I haven' t heard anything this year that's ad inventite. I don' t really expect to."</h1>
-        <i class="fas fa-play"></i>
+        <img src="../assets/img/band_interview_play_icon.png" alt="">
       </div>
     </div>
 
@@ -153,13 +181,16 @@ export default {
         .col-left {
           height: 100%;
           width: 100%;
+          margin: 10px;
         }
         .col-right {
           height: 100%;
           width: 70%;
-          margin-left: 10px;
+          margin: 10px;
         }
         .card {
+          margin-bottom: 1rem;
+
           img {
             width: 100%;
             }
@@ -169,11 +200,29 @@ export default {
               font-size: 0.7rem;
               h1 {
                 color: $brand-primary-btn-color;
+                font-size: 1.2rem;
               }
               p {
                   color: #7D7B8D;
                   line-height: 1.5rem;
               }
+          }
+        }
+        section {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          height: 512px;
+          
+          .card {
+            width: 500px;
+            align-self: flex-start;
+          }
+          .card-text {
+            width: 50%;
+          }
+          .card img {
+            width: 50%;
           }
         }
       }
@@ -212,14 +261,11 @@ export default {
         h1 {
           font-size: 1rem;
           line-height: 1.5rem;
+          margin-bottom: 2rem;
         }
-        i {
-          background-color: #ea4a56;
-          color: white;
-          padding: 1.2rem;
-          border-radius: 50%;
-          margin: 2rem 0;
-        }
+        img {
+          width: 70px;
+        };
       }
     }
 
