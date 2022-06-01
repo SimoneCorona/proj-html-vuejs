@@ -16,11 +16,11 @@
       <div class="container">
         
         <div class="col-left">
-          <div class="card">
+          <div class="card" @mouseover="mouseover()" @mouseleave="mouseleave()">
             <img src="../assets/img/blog_music_techo-600x300.jpg" alt="">
             <div class="card-text">
               <h1>Technology and music</h1>
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, quis voluptates?</p>
+              <p :class="myHover = true ? 'd-none' : '' ">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, quis voluptates?</p>
             </div>
           </div>
           
@@ -131,10 +131,19 @@ export default {
                     name: "ENVISION FESTIVAL -",
                     state: "UVITA, COSTA RICA"
                 },
-            ]
-        };
+            ],
+            myHover: false
+        }
     },
-    components: { MyLiveDates }
+    components: { MyLiveDates },
+    methods: {
+      mouseover() {
+        this.myHover = true
+      },    
+    mouseleave() {
+      this.myHover = false
+      }
+  }
 }
 
 </script>

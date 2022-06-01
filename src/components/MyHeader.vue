@@ -7,6 +7,9 @@
             <div>
                 <i class="fas fa-bars"></i>
             </div>
+            <div>
+                <p v-for="(element, index) in menù" :key="index" ></p>
+            </div>
         </div>
         <div class="header-content">
             <h1>Untold Stories</h1>
@@ -21,7 +24,16 @@
 
 <script>
 export default {
-    name: 'MyHeader'
+    name: 'MyHeader',
+    
+    props: {
+       menù: Array,
+    },
+    data () {
+      return {
+        menùList: this.menù  
+        }
+    }  
 }
 </script>
 

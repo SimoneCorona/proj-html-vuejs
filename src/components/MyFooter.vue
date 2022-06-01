@@ -5,7 +5,7 @@
           <img src="../assets/img/avada-music-logo.png" alt="">
         </div>
         <div>
-
+          <p v-for="(element, index) in menùList" :key="index"> {{ element }} </p>
         </div>
     </div>
     
@@ -28,7 +28,17 @@
 
 <script>
 export default {
-    name: 'MyFooter'
+    name: 'MyFooter',
+
+    props: {
+       menù: Array,
+    },
+    data () {
+      return {
+        menùList: this.menù 
+        
+      }
+    }
 }
 </script>
 

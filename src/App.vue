@@ -1,8 +1,8 @@
 <template>
   <div>
-    <MyHeader />
+    <MyHeader :menù="element"/>
     <MyMain />
-    <MyFooter />
+    <MyFooter :menù="element" />
   </div>
 </template>
 
@@ -18,8 +18,21 @@ export default {
     MyHeader,
     MyMain,
     MyFooter,
-}
-}
+  },
+
+  data() {
+        return {
+            menùOptions: [
+              'Home',
+              'Meet The Band',
+              'Live Dates',
+              'Latest News',
+              'Albums',
+              'Fans'
+            ],  
+        };
+      },
+}        
 </script>
 
 <style lang="scss">
