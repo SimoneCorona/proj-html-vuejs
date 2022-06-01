@@ -1,8 +1,8 @@
 <template>
   <div>
-    <MyHeader :menù="element"/>
+    <MyHeader :menu="menuOptions"/>
     <MyMain />
-    <MyFooter :menù="element" />
+    <MyFooter :menu="menuOptions" />
   </div>
 </template>
 
@@ -22,7 +22,7 @@ export default {
 
   data() {
         return {
-            menùOptions: [
+            menuOptions: [
               'Home',
               'Meet The Band',
               'Live Dates',

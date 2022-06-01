@@ -16,11 +16,11 @@
       <div class="container">
         
         <div class="col-left">
-          <div class="card" @mouseover="mouseover()" @mouseleave="mouseleave()">
+          <div class="card">
             <img src="../assets/img/blog_music_techo-600x300.jpg" alt="">
             <div class="card-text">
               <h1>Technology and music</h1>
-              <p :class="myHover = true ? 'd-none' : '' ">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, quis voluptates?</p>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia, quis voluptates?</p>
             </div>
           </div>
           
@@ -132,18 +132,9 @@ export default {
                     state: "UVITA, COSTA RICA"
                 },
             ],
-            myHover: false
         }
     },
     components: { MyLiveDates },
-    methods: {
-      mouseover() {
-        this.myHover = true
-      },    
-    mouseleave() {
-      this.myHover = false
-      }
-  }
 }
 
 </script>
@@ -183,22 +174,40 @@ export default {
     .banner {
       .container {
         display: flex;
-        min-height: 500px;
         background-color: $brand-primary-bg-color;
-        padding: 0 15% 5%;
+        padding: 0 15% 20%;
+        
         
         .col-left {
-          height: 100%;
+          height: 1300px;
           width: 100%;
           margin: 10px;
         }
         .col-right {
-          height: 100%;
+          height: 1300px;
           width: 70%;
           margin: 10px;
         }
         .card {
           margin-bottom: 1rem;
+        }
+        .card:hover {
+          transition: .5s;
+          filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.7);
+          
+          h1 {
+            position: absolute;
+            top: 40%;
+            left: 25%;
+            color: white;
+          }
+          .card-text{
+            background:none;
+          }
+          p {
+              display: none;
+          }
+        }
 
           img {
             width: 100%;
@@ -221,21 +230,14 @@ export default {
           display: flex;
           flex-direction: column;
           flex-wrap: wrap;
-          height: 512px;
+          height: 500px;
+          margin-bottom: 1rem;
           
           .card {
-            width: 500px;
-            align-self: flex-start;
-          }
-          .card-text {
-            width: 50%;
-          }
-          .card img {
-            width: 50%;
+            width: 295px;
           }
         }
-      }
-    }
+      }  
     .red-container {
       text-align: center;
       background-color: $brand-primary-btn-color;

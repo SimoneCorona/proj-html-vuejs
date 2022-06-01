@@ -1,11 +1,11 @@
 <template>
   <footer>
     <div class="upper-footer">
-       <div>
+       <div class="avada-container">
           <img src="../assets/img/avada-music-logo.png" alt="">
         </div>
-        <div>
-          <p v-for="(element, index) in menùList" :key="index"> {{ element }} </p>
+        <div class="menu">
+          <p v-for="(element, index) in menu" :key="index"><a href="">{{ element }}</a></p>
         </div>
     </div>
     
@@ -31,14 +31,8 @@ export default {
     name: 'MyFooter',
 
     props: {
-       menù: Array,
+       menu: Array,
     },
-    data () {
-      return {
-        menùList: this.menù 
-        
-      }
-    }
 }
 </script>
 
@@ -49,6 +43,20 @@ export default {
 .upper-footer {
   background-color: $brand-primary-bg-light-color;
   padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #7D7B8D;
+      
+    .menu{
+      display: flex;
+      p {
+        margin: 0 10px;
+      }
+      p:hover{
+        color: white;
+      }
+    }
 }
 .down-footer {
   background-color: $brand-primary-bg-color;

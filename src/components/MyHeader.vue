@@ -8,7 +8,7 @@
                 <i class="fas fa-bars"></i>
             </div>
             <div>
-                <p v-for="(element, index) in menù" :key="index" ></p>
+                <p v-for="(element, index) in menu" :key="index">{{ element }}</p>
             </div>
         </div>
         <div class="header-content">
@@ -19,21 +19,16 @@
                 <button class="transparent-btn">LIVE DATES</button>
             </section>
         </div>
+        <div class="red-line"></div>
     </header>
 </template>
 
 <script>
 export default {
     name: 'MyHeader',
-    
     props: {
-       menù: Array,
+       menu: Array
     },
-    data () {
-      return {
-        menùList: this.menù  
-        }
-    }  
 }
 </script>
 
@@ -91,6 +86,13 @@ export default {
                     border-color: white;
                 }
             }
+        }
+        .red-line {
+                position: absolute;
+                border-top: 10px solid $brand-primary-btn-color;
+                width: 200px;
+                bottom: -10px;
+                left: 42%;
         }
     }
 </style>
