@@ -7,9 +7,10 @@
             <div>
                 <i class="fas fa-bars"></i>
             </div>
-            <div>
-                <p v-for="(element, index) in menu" :key="index">{{ element }}</p>
-            </div>
+        </div>
+        
+        <div class="menu">
+            <p v-for="(element, index) in menu" :key="index">{{ element }}</p>
         </div>
         <div class="header-content">
             <h1>Untold Stories</h1>
@@ -21,6 +22,7 @@
         </div>
         <div class="red-line"></div>
     </header>
+    
 </template>
 
 <script>
@@ -28,12 +30,13 @@ export default {
     name: 'MyHeader',
     props: {
        menu: Array
-    },
+    }
 }
 </script>
 
 <style scoped lang="scss">
 @import "../style/variable.scss";
+
 
     header{
         background-image: url(../assets/img/home_slider.jpg);
@@ -42,7 +45,6 @@ export default {
         background-position: center;
         color: white;
         height: 100vh;
-
         .container-logo {
             display: flex;
             align-items: center;
@@ -52,6 +54,12 @@ export default {
             i {
                 font-size: 1.5rem;
             }
+        }
+        .menu {
+            background-color: $brand-primary-btn-color;
+            text-align: center;
+            line-height: 1.5rem;
+            padding-bottom: 1rem;
         }
         .header-content {
             text-align: center;

@@ -109,27 +109,32 @@ export default {
                 {
                     date: "17/08/2020",
                     name: "GEM FESTIVAL 2020",
-                    state: "ANAKALIA, GEORGIA"
+                    state: "ANAKALIA, GEORGIA",
+                    showCard: true,
                 },
                 {
                     date: "24/9/2020",
                     name: "GROOVFEST",
-                    state: "DOMINIC REPUBLIC"
+                    state: "DOMINIC REPUBLIC",
+                    showCard: true,
                 },
                 {
                     date: "31/10/2020",
                     name: "OASIS FESTIVAL 2020 MARRAKECH",
-                    state: "MARRAKECH, MOROCCO"
+                    state: "MARRAKECH, MOROCCO",
+                    showCard: true,
                 },
                 {
                     date: "07/11/2020",
                     name: "MOGA FESTIVAL -",
-                    state: "ESSAOURIA, MOROCCO"
+                    state: "ESSAOURIA, MOROCCO",
+                    showCard: true,
                 },
                 {
                     date: "10/12/2020",
                     name: "ENVISION FESTIVAL -",
-                    state: "UVITA, COSTA RICA"
+                    state: "UVITA, COSTA RICA",
+                    showCard: true,
                 },
             ],
         }

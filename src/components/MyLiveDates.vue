@@ -18,11 +18,12 @@
 <script>
 export default {
     name: 'MyLiveDates',
-
+   
     props: {
        live: Object,
-    }
+    },
 }
+
 </script>
 
 <style scoped lang="scss">
