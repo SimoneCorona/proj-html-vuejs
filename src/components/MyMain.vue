@@ -236,7 +236,7 @@ export default {
           flex-direction: column;
           flex-wrap: wrap;
           height: 500px;
-          margin-bottom: 1rem;
+          margin-bottom: 6rem;
           
           .card {
             width: 295px;

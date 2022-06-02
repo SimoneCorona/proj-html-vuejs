@@ -22,7 +22,6 @@
         </div>
         <div class="red-line"></div>
     </header>
-    
 </template>
 
 <script>
